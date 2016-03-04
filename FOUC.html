@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="en-GB" prefix="og: http://ogp.me/ns#" ng-app="app">
+<head itemscope itemtype="http://schema.org/WebSite">
+<!-- standard -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+
+<title>[[PAGETITLE]]</title>
+<meta name="title" content="[[PAGETITLE]]">
+<meta name="description" content="[[PAGEDESCRIPTION]]">
+
+<style>
+	/* inline href="/styles/critical.css" */
+	/* Extract the styles that apply to above-the-fold content and load them inline in the <head> */
+</style>
+
+<!-- include loadCSS here... for async css loading -->
+<script>
+	// https://github.com/filamentgroup/loadCSS
+	(function(w){"use strict";
+	var loadCSS=function(l,e,c){function h(a){if(b.body)return a();setTimeout(function(){h(a)})}var b=w.document,a=b.createElement("link"),f=c||"all",d;e?d=e:(c=(b.body||b.getElementsByTagName("head")[0]).childNodes,d=c[c.length-1]);var k=b.styleSheets;a.rel="stylesheet";a.href=l;a.media="only x";h(function(){d.parentNode.insertBefore(a,e?d:d.nextSibling)});var g=function(b){for(var d=a.href,c=k.length;c--;)if(k[c].href===d)return b();setTimeout(function(){g(b)})};a.addEventListener&&a.addEventListener("load",
+function(){this.media=f});a.onloadcssdefined=g;g(function(){a.media!==f&&(a.media=f)});return a};"undefined"!==typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS;
+	// load a file
+	function onloadCSS(a,c){function b(){!d&&c&&(d=!0,c.call(a))}var d;a.addEventListener&&a.addEventListener("load",b);a.attachEvent&&a.attachEvent("onload",b);if("isApplicationInstalled"in navigator&&"onloadcssdefined"in a)a.onloadcssdefined(b)};
+
+	var appCSS = loadCSS( '/styles/modules.css' );
+
+	onloadCSS( appCSS, function() {
+		var expires = new Date(+new Date + (7 * 24 * 60 * 60 * 1000)).toUTCString();
+		document.cookie = 'fullCSS=true; expires=' + expires;
+	});
+	}( typeof global !== "undefined" ? global : this ));
+</script>
+<!-- call modules if no use of JS -->
+<noscript>
+	<link rel="stylesheet" href="/styles/modules.css">
+</noscript>
+
+<!-- http://www.paulirish.com/2009/avoiding-the-fouc-v3/ -->
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+</head>
+<body>
+
+<div id="fouc">
+	<div>
+
+
+
+	</div>
+</div>
+
+</body>
+</html>
