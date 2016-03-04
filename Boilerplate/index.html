@@ -1,0 +1,214 @@
+<!doctype html>
+<!-- font-loaded class in head via code -->
+<html class="no-js" lang="en-GB" prefix="og: http://ogp.me/ns#" ng-app="app">
+<head itemscope itemtype="http://schema.org/WebSite">
+<!-- standard -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+
+<title>[[PAGETITLE]]</title>
+<!-- https://developer.mozilla.org/en/docs/Web/HTML/Element/meta#attr-name -- name has a specific semantic in the <meta> element and that the itemprop must not be set when one of the name, http-equiv or charset -->
+<meta name="title" content="[[PAGETITLE]]">
+<meta itemprop="name" content="[[PAGETITLE]]">
+<meta name="description" content="[[PAGEDESCRIPTION]]">
+<meta itemprop="description" ncontent="[[PAGEDESCRIPTION]]">
+<meta itemprop="image" content="[[SITEURL]]/share_logo.png" />
+<link rel="image_src" type="image/png" href="[[SITEURL]]/share_logo.png" />
+<meta name="keywords" content="[[PAGEKEYWORDS]]">
+<meta name="author" content="[[SITEAUTHOR]]">
+
+<!-- mobile friendly -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- share -->
+<!-- share facebook / linkedin / twitter -->
+<!-- <meta name="twitter:card" content="summary"> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="[SITENAME]">
+<meta property="og:type" content="website">
+<meta property="og:url" content="[[SITEURL]]/[[PAGEURL]]">
+<meta name="twitter:site" content="[[TWITTERUSER]]">
+<meta name="twitter:creator" content="[[SITEAUTHOR]]">
+<meta property="og:title" name="twitter:title" content="[PAGETITLE]">
+<meta property="og:description" name="twitter:description" content="[[PAGEDESCRIPTION]]">
+<meta property="og:image" name="twitter:image" content="[[SITEURL]]/share_social.jpg">
+
+<!-- search varification -->
+<meta name="google-site-verification" content="">
+<meta name="msvalidate.01" content="">
+<meta name="uptime-verification" content="uptime-robot">
+
+<!-- icons -->
+<!-- use largest versions only -->
+<link rel="apple-touch-icon" href="/favs/apple-180x180.png">
+<link rel="icon" type="image/png" href="/favs/favicon-192x192.png" >
+<link rel="shortcut icon" type="image/png" href="/favs/favicon-32x32.png">
+<!-- Place favicon.ico in the root directory -->
+
+<link rel="manifest" href="/manifest.json">
+
+<!-- ms-tiles -->
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-TileImage" content="/favs/mstile-144x144.png">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- alternatives -->
+<link rel="alternate" type="application/rss+xml" title="[SITENAME] RSS Feed" href="[RSSURL]">
+
+<!-- styles -->
+<style>
+	/* External Font Definitions */
+	@font-face{
+		font-family:'Source Sans Pro';
+		src:url('/fonts/sourcesanspro.eot');
+		src:url('/fonts/sourcesanspro.eot?#iefix') format('embedded-opentype'),
+			url('/fonts/sourcesanspro.woff2') format('woff2'),
+			url('/fonts/sourcesanspro.woff') format('woff'),
+			url('/fonts/SourceSansPro.ttf') format('truetype'),
+			url('/fonts/sourcesanspro.svg#source_sans_proregular') format('svg');
+		font-weight:normal;
+		font-style:normal
+	}
+	/* Fonts Loaded Styles */
+	.f_l body {
+		font-family:'Source Sans Pro',Arial,Helvetica,sans-serif;
+	}
+</style>
+
+<style>
+	/* inline href="/styles/critical.css" */
+	/* Extract the styles that apply to above-the-fold content and load them inline in the <head> */
+</style>
+
+<!-- INIT SCRIPTS -->
+<script>
+// Env Setup
+var DEBUG = true;
+window.DEBUG = DEBUG;
+
+var DEV = true;
+window.DEV = DEV;
+
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(
+	document.createTextNode(
+	  "@-ms-viewport{width:auto!important}"
+	)
+  );
+  document.getElementsByTagName("head")[0].
+	appendChild(msViewportStyle);
+}
+</script>
+
+<!-- include loadCSS here... for async css loading -->
+<script>
+	// https://github.com/filamentgroup/loadCSS
+	(function(w){"use strict";
+	var loadCSS=function(l,e,c){function h(a){if(b.body)return a();setTimeout(function(){h(a)})}var b=w.document,a=b.createElement("link"),f=c||"all",d;e?d=e:(c=(b.body||b.getElementsByTagName("head")[0]).childNodes,d=c[c.length-1]);var k=b.styleSheets;a.rel="stylesheet";a.href=l;a.media="only x";h(function(){d.parentNode.insertBefore(a,e?d:d.nextSibling)});var g=function(b){for(var d=a.href,c=k.length;c--;)if(k[c].href===d)return b();setTimeout(function(){g(b)})};a.addEventListener&&a.addEventListener("load",
+function(){this.media=f});a.onloadcssdefined=g;g(function(){a.media!==f&&(a.media=f)});return a};"undefined"!==typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS;
+	// load a file
+	function onloadCSS(a,c){function b(){!d&&c&&(d=!0,c.call(a))}var d;a.addEventListener&&a.addEventListener("load",b);a.attachEvent&&a.attachEvent("onload",b);if("isApplicationInstalled"in navigator&&"onloadcssdefined"in a)a.onloadcssdefined(b)};
+
+	var appCSS = loadCSS( '/styles/modules.css' );
+
+	onloadCSS( appCSS, function() {
+		var expires = new Date(+new Date + (7 * 24 * 60 * 60 * 1000)).toUTCString();
+		document.cookie = 'fullCSS=true; expires=' + expires;
+	});
+	}( typeof global !== "undefined" ? global : this ));
+</script>
+<!-- call modules if no use of JS -->
+<noscript>
+	<link rel="stylesheet" href="/styles/modules.css">
+</noscript>
+
+<!-- http://www.paulirish.com/2009/avoiding-the-fouc-v3/ -->
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+</head>
+<body>
+<!--[if lt IE 10]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<ul class="a11y a11y--header">
+	<li><a href="#content" title="Skip to content" accesskey="c"><span>Skip to content</span></a></li>
+	<li><a href="#navigation" title="Skip to navigation" accesskey="n">&gt; <span>Skip to navigation</span></a></li>
+	<li><a href="/accessibility/" title="Accessibility Help" accesskey="a">&gt; <span>Accessibility help</span></a></li>
+	<li><a href="/sitemap/" title="Site map" accesskey="m">&gt; <span>Site map</span></a></li>
+	<li><a href="/search/" title="Site search" accesskey="s">&gt; <span>Site search</span></a></li>
+</ul>
+
+<div id="fouc">
+	<div>
+
+
+
+	</div>
+</div>
+
+<script src="/js/lib/angular/angular.js"></script>
+<script src="/js/app.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+	window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+	ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+<script>
+	// FOUC CHECK
+</script>
+
+<!-- per page json-ld - this could be referenced in or use a general and a specific page one. ->
+<script type="application/ld+json">
+{
+
+	"@context" : "http://schema.org",
+	"@type" : "Organization",
+	"image": "[[SITEURL]]/share_logo.png",
+	"name": "[SITENAME]",
+	"url": "[[SITEURL]]",
+
+	"sameas": [
+		"https://www.facebook.com/####",
+		"https://twitter.com/####",
+		"https://linkedin.com/####",
+		"https://plus.google.com/####"
+	],
+
+	"contactPoint" : [{
+		"@type" : "ContactPoint",
+		"email": "info@#####.com",
+		"telephone": "#######",
+		"contactType": "Customer Support"
+	}],
+
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "[[SITEURL]]/search/?q={search_term}",
+		"query-input": "required name=search_term"
+		}
+	},
+
+	"address": [{
+		"@type": "PostalAddress",
+
+		"streetAddress": "#####",
+		"addressLocality": "#####",
+		"postalCode": "#####"
+	}]
+
+}
+</script>
+
+
+</body>
+</html>

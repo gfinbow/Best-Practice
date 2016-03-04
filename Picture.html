@@ -1,0 +1,24 @@
+<html>
+	<head>
+	</head>
+	<body>
+
+		<!-- responsive picture element -->
+
+		<picture>
+		   <source media="(min-width: 36em)" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w" sizes="33.3vw" />
+		   <source srcset="cropped-large.jpg 2x, cropped-small.jpg 1x" />
+		   <img src="small.jpg" alt="A rad wolf" />
+		</picture>
+
+		<!-- alternative output -->
+
+		<picture>
+		   <source type="image/svg" src="logo.svg" />
+		   <source type="image/png" src="logo.png" />
+		   <img src="logo.gif" alt="RadWolf, Inc." />
+		</picture>
+
+
+	</body>
+</html>
