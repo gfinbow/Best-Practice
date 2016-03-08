@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="en-GB" prefix="og: http://ogp.me/ns#" ng-app="app">
+<head itemscope itemtype="http://schema.org/WebSite">
+<!-- standard -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+
+<title>[[PAGETITLE]]</title>
+<meta name="title" content="[[PAGETITLE]]">
+<meta name="description" content="[[PAGEDESCRIPTION]]">
+
+<style>
+	.icon {
+		height: 32px;
+		width: 32px;
+	}
+	.icon.xs {
+		height: 8px;
+		width: 8px;
+	}
+
+	.icon.sm {
+		height: 16px;
+		width: 16px;
+	}
+
+	.icon.lg {
+		height: 64px;
+		width: 64px;
+
+	}
+
+	.icon.xl {
+		height: 96px;
+		width: 96px;
+
+	}
+</style>
+
+</head>
+<body>
+<!-- inject svg icons at the top of the document -->
+<svg class="svg__icons" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+  <symbol id="menu" viewBox="0 0 96 96">
+	  <g>
+		  <path d="m 0,66 96,0 0,18 -96,0 z" />
+		  <path d="m 0,38 96,0 0,18 -96,0 z" />
+		  <path d="m 0,10 96,0 0,18 -96,0 z" />
+	  </g>
+  </symbol>
+
+  <symbol id="other-menu" viewBox="0 0 96 96">
+	  <g>
+		  <path d="m 0,66 96,0 0,18 -96,0 z" />
+		  <path d="m 0,38 96,0 0,18 -96,0 z" />
+		  <path d="m 0,10 96,0 0,18 -96,0 z" />
+	  </g>
+  </symbol>
+</svg>
+
+
+
+<svg class="icon icon--type xs">
+  <use xlink:href="#menu" />
+</svg>
+
+<svg class="icon icon--type sm">
+  <use xlink:href="#other-menu" />
+</svg>
+
+<svg class="icon icon--type">
+  <use xlink:href="#menu" />
+</svg>
+
+<svg class="icon icon--type lg">
+  <use xlink:href="#other-menu" />
+</svg>
+
+<svg class="icon icon--type xl">
+  <use xlink:href="#menu" />
+</svg>
+
+</body>
+</html>

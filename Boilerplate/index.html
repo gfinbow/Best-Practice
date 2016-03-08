@@ -3,19 +3,22 @@
 <html class="no-js" lang="en-GB" prefix="og: http://ogp.me/ns#" ng-app="app">
 <head itemscope itemtype="http://schema.org/WebSite">
 <!-- standard -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+<link rel="image_src" type="image/png" href="[[SITEURL]]/share_logo.png" />
 
 <title>[[PAGETITLE]]</title>
+
 <!-- https://developer.mozilla.org/en/docs/Web/HTML/Element/meta#attr-name -- name has a specific semantic in the <meta> element and that the itemprop must not be set when one of the name, http-equiv or charset -->
 <meta name="title" content="[[PAGETITLE]]">
 <meta itemprop="name" content="[[PAGETITLE]]">
 <meta name="description" content="[[PAGEDESCRIPTION]]">
 <meta itemprop="description" ncontent="[[PAGEDESCRIPTION]]">
 <meta itemprop="image" content="[[SITEURL]]/share_logo.png" />
-<link rel="image_src" type="image/png" href="[[SITEURL]]/share_logo.png" />
 <meta name="keywords" content="[[PAGEKEYWORDS]]">
-<meta name="author" content="[[SITEAUTHOR]]">
+<meta name="author" content="https://plus.google.com/+GaryFinbow">
 
 <!-- mobile friendly -->
 <meta name="HandheldFriendly" content="True">
@@ -84,6 +87,11 @@
 <style>
 	/* inline href="/styles/critical.css" */
 	/* Extract the styles that apply to above-the-fold content and load them inline in the <head> */
+
+	body {
+	color: red;
+	}
+
 </style>
 
 <!-- INIT SCRIPTS -->
@@ -102,8 +110,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 	  "@-ms-viewport{width:auto!important}"
 	)
   );
-  document.getElementsByTagName("head")[0].
-	appendChild(msViewportStyle);
+  document.getElementsByTagName("head")[0].	appendChild(msViewportStyle);
 }
 </script>
 
@@ -116,7 +123,7 @@ function(){this.media=f});a.onloadcssdefined=g;g(function(){a.media!==f&&(a.medi
 	// load a file
 	function onloadCSS(a,c){function b(){!d&&c&&(d=!0,c.call(a))}var d;a.addEventListener&&a.addEventListener("load",b);a.attachEvent&&a.attachEvent("onload",b);if("isApplicationInstalled"in navigator&&"onloadcssdefined"in a)a.onloadcssdefined(b)};
 
-	var appCSS = loadCSS( '/styles/modules.css' );
+	var appCSS = loadCSS( 'styles/modules.css' );
 
 	onloadCSS( appCSS, function() {
 		var expires = new Date(+new Date + (7 * 24 * 60 * 60 * 1000)).toUTCString();
@@ -139,16 +146,16 @@ function(){this.media=f});a.onloadcssdefined=g;g(function(){a.media!==f&&(a.medi
 <![endif]-->
 <ul class="a11y a11y--header">
 	<li><a href="#content" title="Skip to content" accesskey="c"><span>Skip to content</span></a></li>
-	<li><a href="#navigation" title="Skip to navigation" accesskey="n">&gt; <span>Skip to navigation</span></a></li>
-	<li><a href="/accessibility/" title="Accessibility Help" accesskey="a">&gt; <span>Accessibility help</span></a></li>
-	<li><a href="/sitemap/" title="Site map" accesskey="m">&gt; <span>Site map</span></a></li>
-	<li><a href="/search/" title="Site search" accesskey="s">&gt; <span>Site search</span></a></li>
+	<li><a href="#navigation" title="Skip to navigation" accesskey="n"><span>Skip to navigation</span></a></li>
+	<li><a href="/accessibility/" title="Accessibility Help" accesskey="a"><span>Accessibility help</span></a></li>
+	<li><a href="/sitemap/" title="Site map" accesskey="m"><span>Site map</span></a></li>
+	<li><a href="/search/" title="Site search" accesskey="s"><span>Site search</span></a></li>
 </ul>
 
 <div id="fouc">
 	<div>
 
-
+		<p>Just some content honnest!</p>
 
 	</div>
 </div>
